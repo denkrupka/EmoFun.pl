@@ -35,6 +35,7 @@
       <nav class="nav-links" aria-label="Menu główne">
         <a href="#about">O nas</a>
         <a href="#offer">Oferta</a>
+        <a href="#trust">Bezpieczeństwo</a>
         <a href="#contact">Kontakt</a>
       </nav>
       <button class="nav-toggle" aria-label="Otwórz menu" aria-expanded="false">
@@ -134,13 +135,51 @@
         <article class="offer-card">
           <div class="offer-icon">🛡️</div>
           <h3>Bezpieczeństwo</h3>
-          <p>Od lat działamy bez żadnej sytuacji wypadkowej. Bezpieczeństwo to nasz priorytet.</p>
+          <p>Od 2021 roku — zero sytuacji wypadkowych i zero skarg. Bezpieczeństwo to nasz priorytet.</p>
           <ul>
-            <li>Pełne ubezpieczenie OC</li>
-            <li>Licencjonowani operatorzy</li>
-            <li>Sprzęt zgodny z normami UE</li>
+            <li>Zdalne ograniczanie prędkości</li>
+            <li>Programowalne strefy GPS</li>
+            <li>Czujniki wywrócenia i antykolizyjne</li>
           </ul>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="trust" class="section">
+    <div class="container">
+      <header class="section-head">
+        <small>Dlaczego EmoFun</small>
+        <h2>Profesjonalizm, któremu możesz zaufać</h2>
+        <p>Od 2021 roku specjalizujemy się w sportach motorowodnych. Każdy element naszej usługi — od sprzętu po załogę — spełnia najwyższe standardy bezpieczeństwa i jakości.</p>
+      </header>
+
+      <div class="trust-grid">
+        <div class="trust-item">
+          <strong>0</strong>
+          <span>sytuacji wypadkowych od 2021 roku</span>
+        </div>
+        <div class="trust-item">
+          <strong>OC</strong>
+          <span>pełne ubezpieczenie odpowiedzialności cywilnej</span>
+        </div>
+        <div class="trust-item">
+          <strong>CE</strong>
+          <span>sprzęt i akcesoria zgodne z normami UE</span>
+        </div>
+        <div class="trust-item">
+          <strong>STCW</strong>
+          <span>licencjonowani sternicy i instruktorzy</span>
+        </div>
+      </div>
+
+      <div class="trust-features">
+        <div class="feature"><span>🌐</span><div><strong>Programowalne strefy bezpieczeństwa</strong><p>Brak możliwości zbliżenia się do plaży poniżej dopuszczalnej odległości.</p></div></div>
+        <div class="feature"><span>🎚️</span><div><strong>Zdalna kontrola prędkości</strong><p>Każdy skuter wyposażony w systemy zdalnego ograniczania prędkości.</p></div></div>
+        <div class="feature"><span>🧭</span><div><strong>Czujniki wywrócenia i antykolizyjne</strong><p>Nowoczesne systemy zapobiegania kolizjom z innymi jednostkami na wodzie.</p></div></div>
+        <div class="feature"><span>🛟</span><div><strong>Karty bezpieczeństwa morskiego</strong><p>Wszystkie jednostki posiadają aktualne karty i certyfikaty CE.</p></div></div>
+        <div class="feature"><span>🎓</span><div><strong>Patenty sternika i instruktora</strong><p>Współpracujemy wyłącznie z wykwalifikowanymi operatorami z uprawnieniami STCW.</p></div></div>
+        <div class="feature"><span>📑</span><div><strong>Referencje z wielu miast</strong><p>Działaliśmy w różnych lokalizacjach nad Bałtykiem — referencje na życzenie.</p></div></div>
       </div>
     </div>
   </section>
@@ -242,7 +281,7 @@
         }
       });
     }, { threshold: 0.12 });
-    document.querySelectorAll('.section, .mission, .offer-card, .contact-card').forEach(el => {
+    document.querySelectorAll('.section, .mission, .offer-card, .trust-item, .feature, .contact-card').forEach(el => {
       el.classList.add('reveal');
       io.observe(el);
     });
