@@ -373,9 +373,16 @@ img { max-width: 100%; display: block; }
   box-shadow: var(--shadow-hover);
 }
 .mission-icon {
-  font-size: 3rem;
-  margin-bottom: 14px;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  margin: 0 auto 18px;
+  background: linear-gradient(135deg, var(--aqua), var(--navy));
+  color: var(--white);
+  display: grid;
+  place-items: center;
 }
+.mission-icon svg { width: 36px; height: 36px; }
 .mission h3 {
   font-size: 1.6rem;
   margin-bottom: 14px;
@@ -418,9 +425,16 @@ img { max-width: 100%; display: block; }
   box-shadow: var(--shadow-hover);
 }
 .offer-icon {
-  font-size: 2.6rem;
-  margin-bottom: 12px;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--aqua), var(--navy));
+  color: var(--white);
+  display: grid;
+  place-items: center;
+  margin-bottom: 16px;
 }
+.offer-icon svg { width: 28px; height: 28px; }
 .offer-card h3 {
   font-size: 1.25rem;
   margin-bottom: 10px;
@@ -440,11 +454,14 @@ img { max-width: 100%; display: block; }
   font-size: 0.95rem;
 }
 .offer-card li::before {
-  content: '⚓';
+  content: '';
   position: absolute;
-  left: 0;
-  color: var(--aqua-deep);
-  font-size: 0.9rem;
+  left: 6px;
+  top: 14px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--aqua-deep);
 }
 
 /* ---------- Trust / Safety ---------- */
@@ -504,11 +521,17 @@ img { max-width: 100%; display: block; }
   transform: translateX(4px);
   border-left-color: var(--navy);
 }
-.feature > span {
-  font-size: 1.8rem;
+.feature-icon {
   flex-shrink: 0;
-  line-height: 1;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--aqua), var(--navy));
+  color: var(--white);
+  display: grid;
+  place-items: center;
 }
+.feature-icon svg { width: 22px; height: 22px; }
 .feature strong {
   display: block;
   font-family: 'Montserrat', sans-serif;
@@ -520,6 +543,89 @@ img { max-width: 100%; display: block; }
   color: var(--muted);
   margin: 0;
   font-size: 0.92rem;
+}
+
+/* ---------- Gallery / Instagram ---------- */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.gallery-tile {
+  position: relative;
+  aspect-ratio: 4/5;
+  border-radius: var(--radius);
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  padding: 18px;
+  color: var(--white);
+  box-shadow: var(--shadow);
+  transition: transform .35s ease, box-shadow .35s ease;
+  isolation: isolate;
+}
+.gallery-tile::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 39, 80, 0.2) 0%, rgba(15, 39, 80, 0.85) 100%);
+  z-index: 1;
+  transition: background .3s ease;
+}
+.gallery-tile > * { position: relative; z-index: 2; }
+.gallery-tile:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-hover);
+}
+.gallery-tile:hover::before {
+  background: linear-gradient(180deg, rgba(15, 39, 80, 0.1) 0%, rgba(15, 39, 80, 0.7) 100%);
+}
+.gallery-tile .play {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  width: 64px; height: 64px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.95);
+  color: var(--navy-deep);
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 30px -10px rgba(0,0,0,0.5);
+  transition: transform .3s ease, background .3s ease;
+}
+.gallery-tile:hover .play {
+  transform: translate(-50%, -50%) scale(1.1);
+  background: var(--aqua);
+  color: var(--navy-deep);
+}
+.gallery-tile .play svg { width: 28px; height: 28px; margin-left: 3px; }
+.gallery-tile .tile-label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+}
+
+.gallery-tile.t1 { background: linear-gradient(135deg, #1a3a6e 0%, #5cc8e6 100%); }
+.gallery-tile.t2 { background: linear-gradient(135deg, #2a9fc4 0%, #f7e7c7 100%); }
+.gallery-tile.t3 { background: linear-gradient(135deg, #0f2750 0%, #2a9fc4 100%); }
+.gallery-tile.t4 { background: linear-gradient(135deg, #5cc8e6 0%, #1a3a6e 100%); }
+.gallery-tile.t5 { background: linear-gradient(135deg, #1a3a6e 0%, #0a1c3a 100%); }
+.gallery-tile.t6 { background: linear-gradient(135deg, #2a9fc4 0%, #5cc8e6 100%); }
+
+.gallery-cta {
+  text-align: center;
+  margin-top: 36px;
+}
+.gallery-cta .btn {
+  gap: 10px;
+}
+
+@media (max-width: 880px) {
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+  .gallery-grid { grid-template-columns: 1fr; }
 }
 
 /* ---------- Contact ---------- */
@@ -549,9 +655,16 @@ img { max-width: 100%; display: block; }
   box-shadow: var(--shadow-hover);
 }
 .contact-icon {
-  font-size: 2rem;
-  margin-bottom: 6px;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--aqua), var(--navy));
+  color: var(--white);
+  display: grid;
+  place-items: center;
+  margin: 0 auto 10px;
 }
+.contact-icon svg { width: 24px; height: 24px; }
 .contact-card strong {
   font-family: 'Montserrat', sans-serif;
   color: var(--navy-deep);
