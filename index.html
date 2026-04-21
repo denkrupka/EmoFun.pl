@@ -35,8 +35,6 @@
       <nav class="nav-links" aria-label="Menu główne">
         <a href="#about">O nas</a>
         <a href="#offer">Oferta</a>
-        <a href="#team">Zespół</a>
-        <a href="#values">Wartości</a>
         <a href="#contact">Kontakt</a>
       </nav>
       <button class="nav-toggle" aria-label="Otwórz menu" aria-expanded="false">
@@ -83,22 +81,10 @@
         <p>EmoFun (Emotion &amp; Funny) to firma, która łączy profesjonalizm, pasję i dziecięcą radość z zabawy. Tworzymy emocje i wspomnienia na lata.</p>
       </header>
 
-      <div class="about-grid">
-        <article class="card">
-          <div class="card-icon">🌊</div>
-          <h3>Nasza historia</h3>
-          <p>Wszystko zaczęło się w sercu małego chłopca. W 2022 marzenie o własnym skuterze stało się rzeczywistością. Dziś działamy nad Bałtykiem — Baltic Park Molo w Świnoujściu — i zmieniamy wakacje tysięcy ludzi.</p>
-        </article>
-        <article class="card">
-          <div class="card-icon">🚀</div>
-          <h3>Nasza misja</h3>
-          <p>Dawać ludziom szczęście, emocje i radość poprzez niezapomniane przeżycia na wodzie. Niezależnie czy masz 5 czy 75 lat — każda przejażdżka, każda fala, każdy uśmiech to nasz prawdziwy cel.</p>
-        </article>
-        <article class="card">
-          <div class="card-icon">🏝️</div>
-          <h3>Nasza wizja</h3>
-          <p>Europejska sieć emocjonalnych przygód — punkty wynajmu skuterów wodnych, atrakcji wodnych i nowych emocji nad każdym morzem Europy. Przygoda dopiero się zaczyna.</p>
-        </article>
+      <div class="mission">
+        <div class="mission-icon">🚀</div>
+        <h3>Nasza misja</h3>
+        <p>Dawać ludziom szczęście, emocje i radość poprzez niezapomniane przeżycia na wodzie. Niezależnie czy masz 5 czy 75 lat — każda przejażdżka, każda fala, każdy uśmiech to nasz prawdziwy cel.</p>
       </div>
     </div>
   </section>
@@ -155,42 +141,6 @@
             <li>Sprzęt zgodny z normami UE</li>
           </ul>
         </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="team" class="section">
-    <div class="container">
-      <header class="section-head">
-        <small>Nasz zespół</small>
-        <h2>Ludzie, którzy budują emocje</h2>
-        <p>Jesteśmy ogniwami jednej maszyny emocji. Każdy z nas ma misję i znaczenie. Razem tworzymy EmoFun.</p>
-      </header>
-
-      <div class="team-grid">
-        <div class="team-card"><div class="team-icon">⚓</div><h4>Zarząd</h4><p>Strategia i kierunek rozwoju firmy.</p></div>
-        <div class="team-card"><div class="team-icon">📋</div><h4>Administrator</h4><p>Organizacja, komunikacja i obsługa klienta.</p></div>
-        <div class="team-card"><div class="team-icon">🎯</div><h4>Instruktor</h4><p>Bezpieczeństwo klienta na wodzie.</p></div>
-        <div class="team-card"><div class="team-icon">🔧</div><h4>Mechanik</h4><p>Sprzęt zawsze w pełnej sprawności.</p></div>
-        <div class="team-card"><div class="team-icon">🚤</div><h4>Sternik</h4><p>Prowadzi motorówkę i dba o bezpieczeństwo na bananie.</p></div>
-        <div class="team-card"><div class="team-icon">🌟</div><h4>Promotor</h4><p>Twarz naszej energii na plaży.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="values" class="section section-alt">
-    <div class="container">
-      <header class="section-head">
-        <small>Wartości</small>
-        <h2>Co nas łączy</h2>
-      </header>
-      <div class="values-grid">
-        <div class="value"><span>🤝</span><strong>Zaufanie</strong><p>Wiemy, że możemy liczyć na siebie.</p></div>
-        <div class="value"><span>💙</span><strong>Odpowiedzialność</strong><p>Każdy z nas odpowiada za emocje klienta.</p></div>
-        <div class="value"><span>💬</span><strong>Komunikacja</strong><p>Rozmawiamy, pytamy, działamy razem.</p></div>
-        <div class="value"><span>🌊</span><strong>Elastyczność</strong><p>Dostosowujemy się i wspieramy wzajemnie.</p></div>
-        <div class="value"><span>⚡</span><strong>Reakcja</strong><p>Nie czekamy — działamy natychmiast.</p></div>
-        <div class="value"><span>🛟</span><strong>Współpraca</strong><p>Jesteśmy drużyną, nie grupą osób.</p></div>
       </div>
     </div>
   </section>
@@ -292,7 +242,7 @@
         }
       });
     }, { threshold: 0.12 });
-    document.querySelectorAll('.section, .card, .offer-card, .team-card, .value, .contact-card').forEach(el => {
+    document.querySelectorAll('.section, .mission, .offer-card, .contact-card').forEach(el => {
       el.classList.add('reveal');
       io.observe(el);
     });
