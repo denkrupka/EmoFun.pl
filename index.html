@@ -3,247 +3,299 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="EmoFun.pl — wypożyczalnia skuterów wodnych. Adrenalina na wodzie, nowoczesna flota, profesjonalna obsluga. Zadzwoń: +48 692 756 362." />
-  <meta name="theme-color" content="#0B2545" />
-  <meta property="og:title" content="EmoFun.pl — Wypożyczalnia skuterów wodnych" />
-  <meta property="og:description" content="Adrenalina na wodzie w morskiej stylistyce. Skutery wodne, szkolenia, eventy." />
+  <title>EmoFun — Wypożyczalnia skuterów wodnych i atrakcji holowanych</title>
+  <meta name="description" content="EmoFun — emocje, zabawa i niezapomniane chwile na wodzie. Wypożyczalnia skuterów wodnych, banan, atrakcje holowane nad Bałtykiem." />
+  <meta name="theme-color" content="#1a3a6e" />
+  <meta property="og:title" content="EmoFun — Z nami wrócisz do dziecięcej radości" />
+  <meta property="og:description" content="Skutery wodne, banan, atrakcje holowane nad Bałtykiem. Emocje i bezpieczeństwo w jednym." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="assets/logo.svg" />
-  <title>EmoFun.pl — Wypożyczalnia skuterów wodnych</title>
-  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <meta property="og:image" content="assets/logo.png" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="assets/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header class="site-header" id="top">
-    <div class="container header-inner">
-      <a href="#top" class="brand" aria-label="EmoFun.pl — strona główna">
-        <img src="assets/logo.svg" alt="EmoFun.pl" class="brand-logo" />
+
+  <div class="ocean-bg" aria-hidden="true">
+    <div class="bubble b1"></div>
+    <div class="bubble b2"></div>
+    <div class="bubble b3"></div>
+    <div class="bubble b4"></div>
+    <div class="bubble b5"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav">
+      <a href="#top" class="brand">
+        <img src="assets/logo.png" alt="EmoFun logo" class="brand-logo" />
+        <span class="brand-name">EmoFun</span>
       </a>
-      <button class="nav-toggle" aria-label="Otwórz menu" aria-expanded="false" aria-controls="primary-nav">
+      <nav class="nav-links" aria-label="Menu główne">
+        <a href="#about">O nas</a>
+        <a href="#offer">Oferta</a>
+        <a href="#team">Zespół</a>
+        <a href="#values">Wartości</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
+      <button class="nav-toggle" aria-label="Otwórz menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
-      <nav id="primary-nav" class="primary-nav" aria-label="Menu główne">
-        <a href="#offer">Oferta</a>
-        <a href="#about">O nas</a>
-        <a href="#gallery">Galeria</a>
-        <a href="#contact">Kontakt</a>
-        <a href="tel:+48692756362" class="nav-cta">+48 692 756 362</a>
-      </nav>
     </div>
   </header>
 
-  <main>
-    <section class="hero" aria-label="Sekcja powitalna">
-      <div class="hero-bg" aria-hidden="true">
-        <div class="wave wave-1"></div>
-        <div class="wave wave-2"></div>
-        <div class="wave wave-3"></div>
-      </div>
-      <div class="container hero-inner">
-        <p class="eyebrow">Skutery wodne · Adrenalina · Lato bez granic</p>
-        <h1 class="hero-title">Poczuj moc <span class="accent">fal</span>. Poczuj <span class="accent">EmoFun</span>.</h1>
-        <p class="hero-sub">Wypożyczalnia skuterów wodnych dla tych, którzy kochają prędkość, słońce i zapach morskiej bryzy. Nowoczesna flota, doświadczona załoga i emocje, które zostają na długo.</p>
-        <div class="hero-cta">
-          <a href="#offer" class="btn btn-primary">Zobacz ofertę</a>
-          <a href="#contact" class="btn btn-ghost">Zarezerwuj</a>
+  <section id="top" class="hero">
+    <div class="container hero-inner">
+      <div class="hero-text">
+        <span class="badge">Emotion &amp; Funny</span>
+        <h1>Z nami wrócisz do <span class="accent">dziecięcej radości</span></h1>
+        <p class="lead">Skutery wodne, banany, atrakcje holowane i emocje, których nie zapomnisz. Dajemy Ci morze zabawy — bezpiecznie, profesjonalnie, z uśmiechem.</p>
+        <div class="cta-row">
+          <a href="#contact" class="btn btn-primary">Zarezerwuj przygodę</a>
+          <a href="#offer" class="btn btn-ghost">Zobacz ofertę</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>1288+</strong><span>wypożyczeń</span></div>
+          <div><strong>1953+</strong><span>uśmiechów na bananie</span></div>
+          <div><strong>100%</strong><span>bezpieczeństwa</span></div>
         </div>
       </div>
-    </section>
-
-    <section id="offer" class="section section-offer reveal" aria-labelledby="offer-title">
-      <div class="container">
-        <header class="section-head">
-          <span class="eyebrow">Nasza oferta</span>
-          <h2 id="offer-title">Co możesz u nas przeżyć</h2>
-          <p class="section-lead">Od szybkiej dawki adrenaliny po całodniowe wyprawy — dobieramy doświadczenie do Twojego rytmu.</p>
-        </header>
-        <div class="cards">
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none"><path d="M6 30c6 3 10 3 16 0s10-3 16 0" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M10 22l6-10h16l6 10" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><circle cx="24" cy="22" r="3" stroke="currentColor" stroke-width="3"/></svg>
-            </div>
-            <h3>Wypożyczenie krótkoterminowe</h3>
-            <p>Sesje 15 min, 30 min lub 1 godzina — idealne na pierwszy kontakt i szybką dawkę emocji.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="18" stroke="currentColor" stroke-width="3"/><path d="M24 10v14l10 6" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
-            </div>
-            <h3>Dzień na wodzie</h3>
-            <p>Pakiety dzienne i weekendowe dla tych, którzy chcą naprawdę nacieszyć się wodą.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none"><path d="M8 36V20l16-10 16 10v16" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M18 36V26h12v10" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>
-            </div>
-            <h3>Szkolenia i instruktaż</h3>
-            <p>Bezpieczny start dla początkujących: podstawy obsługi, zasady na wodzie i pierwszy przejazd pod okiem instruktora.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none"><path d="M4 24c8-8 14-8 20 0s12 8 20 0" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><path d="M4 34c8-8 14-8 20 0s12 8 20 0" stroke="currentColor" stroke-width="3" stroke-linecap="round"/><circle cx="36" cy="12" r="4" stroke="currentColor" stroke-width="3"/></svg>
-            </div>
-            <h3>Wyprawy z instruktorem</h3>
-            <p>Czarter grupowy z przewodnikiem — najpiękniejsze trasy, ukryte zatoki i fotogeniczne miejsca.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none"><path d="M10 38V14l14-6 14 6v24" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M18 38V26h12v12" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M6 38h36" stroke="currentColor" stroke-width="3" stroke-linecap="round"/></svg>
-            </div>
-            <h3>Eventy firmowe i integracje</h3>
-            <p>Organizujemy wydarzenia team-buildingowe, urodziny, wieczory kawalerskie i panieńskie — z prawdziwym rozmachem.</p>
-          </article>
-          <article class="card">
-            <div class="card-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="14" width="36" height="24" rx="3" stroke="currentColor" stroke-width="3"/><circle cx="24" cy="26" r="7" stroke="currentColor" stroke-width="3"/><path d="M18 14l4-6h4l4 6" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/></svg>
-            </div>
-            <h3>Sesje foto i wideo</h3>
-            <p>Profesjonalne ujęcia na wodzie — idealne na social media, kampanie i pamiątkę z sezonu.</p>
-          </article>
+      <div class="hero-visual">
+        <div class="logo-frame">
+          <img src="assets/logo.png" alt="EmoFun logo" />
+          <div class="ring"></div>
         </div>
-        <p class="offer-note">Szczegóły, dostępność i rezerwacja — <a href="#contact">skontaktuj się z nami</a>. Dopasujemy wariant do Ciebie.</p>
-      </div>
-    </section>
-
-    <section id="about" class="section section-about reveal" aria-labelledby="about-title">
-      <div class="container about-grid">
-        <div class="about-copy">
-          <span class="eyebrow">O nas</span>
-          <h2 id="about-title">EmoFun.pl — emocje pisane wodą</h2>
-          <p>Jesteśmy zespołem pasjonatów sportów wodnych. Powstaliśmy z prostego przekonania: najlepsze wspomnienia rodzą się tam, gdzie kończy się ląd. Dlatego każdego lata wyjeżdżamy na wodę, żeby dzielić się tą emocją z naszymi klientami.</p>
-          <p>Nasza flota to regularnie serwisowane, nowoczesne skutery wodne renomowanych marek. Dbamy o bezpieczeństwo — każdy klient przechodzi krótki instruktaż, otrzymuje sprzęt ratunkowy i jasne zasady poruszania się na wodzie.</p>
-          <p>Działamy zgodnie z przepisami, z licencjonowanymi instruktorami i pełnym ubezpieczeniem. Chcemy, żeby każda minuta spędzona z nami była tylko o jednym: o czystej radości.</p>
-          <ul class="about-points">
-            <li><strong>Nowoczesna flota</strong> — regularny serwis i kontrola techniczna.</li>
-            <li><strong>Bezpieczeństwo</strong> — kamizelki, instruktaż i obserwacja z brzegu.</li>
-            <li><strong>Elastyczność</strong> — sesje od 15 minut po pełny weekend.</li>
-            <li><strong>Ludzie</strong> — ekipa, która kocha to, co robi.</li>
-          </ul>
-        </div>
-        <aside class="about-stats" aria-label="Nasze liczby">
-          <div class="stat"><span class="stat-num">100%</span><span class="stat-label">sprzęt serwisowany</span></div>
-          <div class="stat"><span class="stat-num">5★</span><span class="stat-label">oceny klientów</span></div>
-          <div class="stat"><span class="stat-num">24/7</span><span class="stat-label">kontakt w sezonie</span></div>
-          <div class="stat"><span class="stat-num">∞</span><span class="stat-label">dobrych emocji</span></div>
-        </aside>
-      </div>
-    </section>
-
-    <section id="gallery" class="section section-gallery reveal" aria-labelledby="gallery-title">
-      <div class="container">
-        <header class="section-head">
-          <span class="eyebrow">Galeria</span>
-          <h2 id="gallery-title">Tak wygląda dzień z EmoFun</h2>
-          <p class="section-lead">Miejsce na Twoje zdjęcia. Podmień pliki w folderze <code>assets/gallery/</code>.</p>
-        </header>
-        <div class="gallery">
-          <figure class="gallery-item g1" aria-label="Skuter wodny na falach"></figure>
-          <figure class="gallery-item g2" aria-label="Zachód słońca nad wodą"></figure>
-          <figure class="gallery-item g3" aria-label="Klienci na pomoście"></figure>
-          <figure class="gallery-item g4" aria-label="Wyprawa z instruktorem"></figure>
-          <figure class="gallery-item g5" aria-label="Event firmowy"></figure>
-          <figure class="gallery-item g6" aria-label="Flota skuterów"></figure>
-        </div>
-      </div>
-    </section>
-
-    <section id="contact" class="section section-contact reveal" aria-labelledby="contact-title">
-      <div class="container contact-grid">
-        <div class="contact-copy">
-          <span class="eyebrow">Kontakt</span>
-          <h2 id="contact-title">Zarezerwuj swoje emocje</h2>
-          <p>Napisz lub zadzwoń — odpowiadamy szybko i konkretnie. Pomożemy dobrać wariant, termin i liczbę skuterów.</p>
-          <ul class="contact-list">
-            <li>
-              <span class="contact-ico" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M4 6l8 7 8-7M4 6v12h16V6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-              </span>
-              <a href="mailto:info@EmoFun.pl">info@EmoFun.pl</a>
-            </li>
-            <li>
-              <span class="contact-ico" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-3 2a12 12 0 006 6l2-3 5 2v4a2 2 0 01-2 2A17 17 0 013 6a2 2 0 012-2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-              </span>
-              <a href="tel:+48692756362">+48 692 756 362</a>
-            </li>
-            <li>
-              <span class="contact-ico" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
-              </span>
-              <a href="https://instagram.com/EmoFun.pl" target="_blank" rel="noopener">Instagram: @EmoFun.pl</a>
-            </li>
-            <li>
-              <span class="contact-ico" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none"><path d="M14 22v-8h3l1-4h-4V7.5c0-1.1.5-2 2-2h2V2h-3c-3 0-5 1.8-5 5v3H7v4h3v8h4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-              </span>
-              <a href="https://facebook.com/EmoFun.pl" target="_blank" rel="noopener">Facebook: @EmoFun.pl</a>
-            </li>
-          </ul>
-        </div>
-        <div class="contact-card">
-          <h3>Szybka rezerwacja</h3>
-          <p>Najszybciej — telefonicznie. W sezonie odpisujemy też na wiadomości w social mediach.</p>
-          <a href="tel:+48692756362" class="btn btn-primary btn-block">Zadzwoń teraz</a>
-          <a href="mailto:info@EmoFun.pl" class="btn btn-ghost btn-block">Napisz e-mail</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div class="footer-brand">
-        <img src="assets/logo.svg" alt="EmoFun.pl" class="footer-logo" />
-        <p>Wypożyczalnia skuterów wodnych. Emocje, bezpieczeństwo i profesjonalna obsługa.</p>
-        <div class="socials">
-          <a href="https://instagram.com/EmoFun.pl" target="_blank" rel="noopener" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="none"><rect x="3" y="3" width="18" height="18" rx="5" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
-          </a>
-          <a href="https://facebook.com/EmoFun.pl" target="_blank" rel="noopener" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M14 22v-8h3l1-4h-4V7.5c0-1.1.5-2 2-2h2V2h-3c-3 0-5 1.8-5 5v3H7v4h3v8h4z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-          </a>
-          <a href="mailto:info@EmoFun.pl" aria-label="E-mail">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M4 6l8 7 8-7M4 6v12h16V6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-          </a>
-          <a href="tel:+48692756362" aria-label="Telefon">
-            <svg viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-3 2a12 12 0 006 6l2-3 5 2v4a2 2 0 01-2 2A17 17 0 013 6a2 2 0 012-2z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <div class="legal-entity">
-        <h4>Podmiot 1</h4>
-        <p class="legal-name">[Nazwa spółki 1]</p>
-        <p>[Adres rejestrowy]<br/>[Kod pocztowy, Miasto]</p>
-        <p>NIP: [NIP 1]<br/>REGON: [REGON 1]<br/>KRS: [KRS 1]</p>
-      </div>
-
-      <div class="legal-entity">
-        <h4>Podmiot 2</h4>
-        <p class="legal-name">[Nazwa spółki 2]</p>
-        <p>[Adres rejestrowy]<br/>[Kod pocztowy, Miasto]</p>
-        <p>NIP: [NIP 2]<br/>REGON: [REGON 2]<br/>KRS: [KRS 2]</p>
-      </div>
-
-      <div class="footer-contact">
-        <h4>Kontakt</h4>
-        <p><a href="mailto:info@EmoFun.pl">info@EmoFun.pl</a></p>
-        <p><a href="tel:+48692756362">+48 692 756 362</a></p>
-        <p>Instagram: <a href="https://instagram.com/EmoFun.pl" target="_blank" rel="noopener">@EmoFun.pl</a></p>
-        <p>Facebook: <a href="https://facebook.com/EmoFun.pl" target="_blank" rel="noopener">@EmoFun.pl</a></p>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div class="container footer-bottom-inner">
-        <p>&copy; <span id="year"></span> EmoFun.pl — Wszelkie prawa zastrzeżone.</p>
-        <p><a href="#top">Wróć do góry ↑</a></p>
+    <div class="wave-divider">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,60 C240,120 480,0 720,60 C960,120 1200,0 1440,60 L1440,120 L0,120 Z" fill="#f4fbff"></path>
+      </svg>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <header class="section-head">
+        <small>Kim jesteśmy</small>
+        <h2>Nie jesteśmy zwykłą wypożyczalnią — jesteśmy EmoFun</h2>
+        <p>EmoFun (Emotion &amp; Funny) to firma, która łączy profesjonalizm, pasję i dziecięcą radość z zabawy. Tworzymy emocje i wspomnienia na lata.</p>
+      </header>
+
+      <div class="about-grid">
+        <article class="card">
+          <div class="card-icon">🌊</div>
+          <h3>Nasza historia</h3>
+          <p>Wszystko zaczęło się w sercu małego chłopca. W 2022 marzenie o własnym skuterze stało się rzeczywistością. Dziś działamy nad Bałtykiem — Baltic Park Molo w Świnoujściu — i zmieniamy wakacje tysięcy ludzi.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🚀</div>
+          <h3>Nasza misja</h3>
+          <p>Dawać ludziom szczęście, emocje i radość poprzez niezapomniane przeżycia na wodzie. Niezależnie czy masz 5 czy 75 lat — każda przejażdżka, każda fala, każdy uśmiech to nasz prawdziwy cel.</p>
+        </article>
+        <article class="card">
+          <div class="card-icon">🏝️</div>
+          <h3>Nasza wizja</h3>
+          <p>Europejska sieć emocjonalnych przygód — punkty wynajmu skuterów wodnych, atrakcji wodnych i nowych emocji nad każdym morzem Europy. Przygoda dopiero się zaczyna.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="offer" class="section section-alt">
+    <div class="container">
+      <header class="section-head">
+        <small>Oferta</small>
+        <h2>Co dla Ciebie mamy</h2>
+        <p>Profesjonalny sprzęt, certyfikowani instruktorzy i pełne bezpieczeństwo. Skontaktuj się z nami, aby ustalić termin i szczegóły.</p>
+      </header>
+
+      <div class="offer-grid">
+        <article class="offer-card">
+          <div class="offer-icon">🛥️</div>
+          <h3>Skutery wodne</h3>
+          <p>Adrenalina i wolność na otwartej wodzie. Nowoczesne, niezawodne skutery — jeździsz sam lub z pasażerem.</p>
+          <ul>
+            <li>Instruktaż przed wypłynięciem</li>
+            <li>Kamizelki ratunkowe CE</li>
+            <li>Strefy bezpieczeństwa GPS</li>
+          </ul>
+        </article>
+
+        <article class="offer-card">
+          <div class="offer-icon">🍌</div>
+          <h3>Banan</h3>
+          <p>Klasyka wakacji. Śmiech, krzyki radości i wspólne chwile z rodziną lub przyjaciółmi. Nasza duma.</p>
+          <ul>
+            <li>Dla dzieci i dorosłych</li>
+            <li>Doświadczony sternik</li>
+            <li>Grupy znajomych i rodziny</li>
+          </ul>
+        </article>
+
+        <article class="offer-card">
+          <div class="offer-icon">🌀</div>
+          <h3>Atrakcje holowane</h3>
+          <p>Dodatkowe atrakcje dla tych, którzy chcą więcej. Idealne na urodziny, wieczór kawalerski czy integrację.</p>
+          <ul>
+            <li>Grupy zorganizowane</li>
+            <li>Eventy i imprezy</li>
+            <li>Niezapomniane emocje</li>
+          </ul>
+        </article>
+
+        <article class="offer-card">
+          <div class="offer-icon">🛡️</div>
+          <h3>Bezpieczeństwo</h3>
+          <p>Od lat działamy bez żadnej sytuacji wypadkowej. Bezpieczeństwo to nasz priorytet.</p>
+          <ul>
+            <li>Pełne ubezpieczenie OC</li>
+            <li>Licencjonowani operatorzy</li>
+            <li>Sprzęt zgodny z normami UE</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="team" class="section">
+    <div class="container">
+      <header class="section-head">
+        <small>Nasz zespół</small>
+        <h2>Ludzie, którzy budują emocje</h2>
+        <p>Jesteśmy ogniwami jednej maszyny emocji. Każdy z nas ma misję i znaczenie. Razem tworzymy EmoFun.</p>
+      </header>
+
+      <div class="team-grid">
+        <div class="team-card"><div class="team-icon">⚓</div><h4>Zarząd</h4><p>Strategia i kierunek rozwoju firmy.</p></div>
+        <div class="team-card"><div class="team-icon">📋</div><h4>Administrator</h4><p>Organizacja, komunikacja i obsługa klienta.</p></div>
+        <div class="team-card"><div class="team-icon">🎯</div><h4>Instruktor</h4><p>Bezpieczeństwo klienta na wodzie.</p></div>
+        <div class="team-card"><div class="team-icon">🔧</div><h4>Mechanik</h4><p>Sprzęt zawsze w pełnej sprawności.</p></div>
+        <div class="team-card"><div class="team-icon">🚤</div><h4>Sternik</h4><p>Prowadzi motorówkę i dba o bezpieczeństwo na bananie.</p></div>
+        <div class="team-card"><div class="team-icon">🌟</div><h4>Promotor</h4><p>Twarz naszej energii na plaży.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="values" class="section section-alt">
+    <div class="container">
+      <header class="section-head">
+        <small>Wartości</small>
+        <h2>Co nas łączy</h2>
+      </header>
+      <div class="values-grid">
+        <div class="value"><span>🤝</span><strong>Zaufanie</strong><p>Wiemy, że możemy liczyć na siebie.</p></div>
+        <div class="value"><span>💙</span><strong>Odpowiedzialność</strong><p>Każdy z nas odpowiada za emocje klienta.</p></div>
+        <div class="value"><span>💬</span><strong>Komunikacja</strong><p>Rozmawiamy, pytamy, działamy razem.</p></div>
+        <div class="value"><span>🌊</span><strong>Elastyczność</strong><p>Dostosowujemy się i wspieramy wzajemnie.</p></div>
+        <div class="value"><span>⚡</span><strong>Reakcja</strong><p>Nie czekamy — działamy natychmiast.</p></div>
+        <div class="value"><span>🛟</span><strong>Współpraca</strong><p>Jesteśmy drużyną, nie grupą osób.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <div class="container">
+      <header class="section-head">
+        <small>Kontakt</small>
+        <h2>Złap z nami falę</h2>
+        <p>Zadzwoń, napisz, znajdź nas w mediach społecznościowych — odpowiadamy błyskawicznie.</p>
+      </header>
+
+      <div class="contact-grid">
+        <a class="contact-card" href="tel:+48692756362">
+          <div class="contact-icon">📞</div>
+          <strong>Telefon</strong>
+          <span>+48 692 756 362</span>
+        </a>
+        <a class="contact-card" href="mailto:info@EmoFun.pl">
+          <div class="contact-icon">✉️</div>
+          <strong>E-mail</strong>
+          <span>info@EmoFun.pl</span>
+        </a>
+        <a class="contact-card" href="https://www.instagram.com/emofun.pl/" target="_blank" rel="noopener">
+          <div class="contact-icon">📷</div>
+          <strong>Instagram</strong>
+          <span>@EmoFun.pl</span>
+        </a>
+        <a class="contact-card" href="https://www.facebook.com/emofunpl/" target="_blank" rel="noopener">
+          <div class="contact-icon">👍</div>
+          <strong>Facebook</strong>
+          <span>@EmoFun.pl</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/logo.png" alt="EmoFun logo" />
+          <div>
+            <strong>EmoFun</strong>
+            <p>Z nami wrócisz do dziecięcej radości.</p>
+          </div>
+        </div>
+        <div class="footer-contacts">
+          <a href="tel:+48692756362">+48 692 756 362</a>
+          <a href="mailto:info@EmoFun.pl">info@EmoFun.pl</a>
+          <div class="socials">
+            <a href="https://www.instagram.com/emofun.pl/" target="_blank" rel="noopener" aria-label="Instagram">Instagram</a>
+            <a href="https://www.facebook.com/emofunpl/" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="legal">
+        <div class="legal-entity">
+          <strong>EmoFun Sp. z o.o.</strong>
+          <span>ul. Masztowa 3, 61-345 Poznań, Polska</span>
+          <span>KRS: 0001166972 &middot; NIP: 7822953095 &middot; REGON: 541425769</span>
+        </div>
+        <div class="legal-entity">
+          <strong>EMOFUN SHPK</strong>
+          <span>Durrës, Lagja 13, Plazh, Pasuria Nr 26/281+1-12, Zona Kadastrale 8518, Shqipëri</span>
+          <span>NUIS: M61615501N</span>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <span>&copy; <span id="year"></span> EmoFun. Wszelkie prawa zastrzeżone.</span>
+        <span>Emotion &amp; Funny 🌊</span>
       </div>
     </div>
   </footer>
 
-  <script src="assets/script.js" defer></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    const toggle = document.querySelector('.nav-toggle');
+    const links = document.querySelector('.nav-links');
+    toggle?.addEventListener('click', () => {
+      const open = links.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
+    });
+    document.querySelectorAll('.nav-links a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        toggle?.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('visible');
+          io.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.section, .card, .offer-card, .team-card, .value, .contact-card').forEach(el => {
+      el.classList.add('reveal');
+      io.observe(el);
+    });
+  </script>
 </body>
 </html>

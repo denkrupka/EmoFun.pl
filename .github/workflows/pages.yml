@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - claude/jet-ski-landing-page-9Zbtq
   workflow_dispatch:
 
 permissions:
