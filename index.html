@@ -241,14 +241,34 @@
         <p>Zobacz, jak wyglądają nasze dni na plaży — skutery, bananowe krzyki radości i uśmiechy klientów. Najświeższe filmy znajdziesz na naszym Instagramie.</p>
       </header>
 
-      <div class="gallery-grid">
-        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DK4ymrbI20B/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/DK4ymrbI20B/">Zobacz film na Instagramie</a></blockquote>
-        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DK7cxblotFS/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/DK7cxblotFS/">Zobacz film na Instagramie</a></blockquote>
-        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DMImqNstxQP/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/DMImqNstxQP/">Zobacz film na Instagramie</a></blockquote>
-        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DMDJiYPNEU4/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/DMDJiYPNEU4/">Zobacz film na Instagramie</a></blockquote>
-        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DK4vKC_I9qW/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/DK4vKC_I9qW/">Zobacz film na Instagramie</a></blockquote>
+      <div class="video-carousel" data-carousel>
+        <button class="carousel-btn carousel-btn--prev" type="button" aria-label="Poprzednie" data-carousel-prev>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 6 9 12 15 18"/></svg>
+        </button>
+        <div class="carousel-viewport" data-carousel-viewport>
+          <div class="carousel-track" data-carousel-track>
+            <figure class="carousel-slide">
+              <video src="assets/photos/video-1.mp4" muted loop playsinline preload="metadata"></video>
+            </figure>
+            <figure class="carousel-slide">
+              <video src="assets/photos/video-2.mp4" muted loop playsinline preload="metadata"></video>
+            </figure>
+            <figure class="carousel-slide">
+              <video src="assets/photos/video-3.mp4" muted loop playsinline preload="metadata"></video>
+            </figure>
+            <figure class="carousel-slide">
+              <video src="assets/photos/video-4.mp4" muted loop playsinline preload="metadata"></video>
+            </figure>
+            <figure class="carousel-slide">
+              <video src="assets/photos/video-5.mp4" muted loop playsinline preload="metadata"></video>
+            </figure>
+          </div>
+        </div>
+        <button class="carousel-btn carousel-btn--next" type="button" aria-label="Następne" data-carousel-next>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 6 15 12 9 18"/></svg>
+        </button>
+        <div class="carousel-dots" data-carousel-dots aria-hidden="true"></div>
       </div>
-      <script async src="//www.instagram.com/embed.js"></script>
 
       <div class="gallery-cta">
         <a href="https://www.instagram.com/emofun.pl/" target="_blank" rel="noopener" class="btn btn-primary">
@@ -367,6 +387,67 @@
     document.querySelectorAll('.section, .mission, .offer-card, .trust-item, .feature, .contact-card').forEach(el => {
       el.classList.add('reveal');
       io.observe(el);
+    });
+
+    document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+      const track = carousel.querySelector('[data-carousel-track]');
+      const prev = carousel.querySelector('[data-carousel-prev]');
+      const next = carousel.querySelector('[data-carousel-next]');
+      const dotsWrap = carousel.querySelector('[data-carousel-dots]');
+      const slides = Array.from(track.children);
+      if (!slides.length) return;
+
+      slides.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = 'carousel-dot';
+        dot.setAttribute('aria-label', `Slajd ${i + 1}`);
+        dot.addEventListener('click', () => scrollToIndex(i));
+        dotsWrap.appendChild(dot);
+      });
+      const dots = Array.from(dotsWrap.children);
+
+      const getIndex = () => {
+        const center = track.scrollLeft + track.clientWidth / 2;
+        let best = 0, bestDist = Infinity;
+        slides.forEach((s, i) => {
+          const c = s.offsetLeft + s.offsetWidth / 2;
+          const d = Math.abs(c - center);
+          if (d < bestDist) { bestDist = d; best = i; }
+        });
+        return best;
+      };
+
+      const scrollToIndex = (i) => {
+        const target = slides[Math.max(0, Math.min(slides.length - 1, i))];
+        track.scrollTo({ left: target.offsetLeft - (track.clientWidth - target.offsetWidth) / 2, behavior: 'smooth' });
+      };
+
+      const updateUi = () => {
+        const i = getIndex();
+        dots.forEach((d, di) => d.classList.toggle('is-active', di === i));
+        prev.disabled = track.scrollLeft <= 2;
+        next.disabled = track.scrollLeft + track.clientWidth >= track.scrollWidth - 2;
+      };
+
+      prev.addEventListener('click', () => scrollToIndex(getIndex() - 1));
+      next.addEventListener('click', () => scrollToIndex(getIndex() + 1));
+      track.addEventListener('scroll', () => requestAnimationFrame(updateUi), { passive: true });
+      window.addEventListener('resize', updateUi);
+      updateUi();
+
+      const videos = carousel.querySelectorAll('video');
+      const vio = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          const v = entry.target;
+          if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
+            v.play().catch(() => {});
+          } else {
+            v.pause();
+          }
+        });
+      }, { root: track, threshold: [0, 0.5, 1] });
+      videos.forEach((v) => vio.observe(v));
     });
   </script>
 </body>
